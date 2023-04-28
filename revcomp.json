@@ -1,0 +1,44 @@
+{
+  "name": "DNA Reverse Complement",
+  "description": "Compute the reverse complement of a DNA sequence.",
+  "api": {
+    "baseUrl": "https://script.google.com/macros/s/AKfycbwsyyIWYr8MAJZrFVe8munOL1WevBN-eltEFrHj26Ge9Ai1_j6mr8Zvn9llRxURcj4yfA/exec",
+    "spec": {
+      "paths": {
+        "/": {
+          "get": {
+            "summary": "Compute the reverse complement of a DNA sequence.",
+            "parameters": [
+              {
+                "name": "dna",
+                "in": "query",
+                "description": "The DNA sequence.",
+                "required": true,
+                "schema": {
+                  "type": "string"
+                }
+              }
+            ],
+            "responses": {
+              "200": {
+                "description": "The reverse complement of the DNA sequence.",
+                "content": {
+                  "application/json": {
+                    "schema": {
+                      "type": "object",
+                      "properties": {
+                        "revcomp": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
